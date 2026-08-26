@@ -1,0 +1,34 @@
+{
+  "name": "oversight-demo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A deliberately broken component library used to demonstrate the Oversight Storybook addon.",
+  "author": "rachel cantor",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rachelslurs/oversight-demo.git"
+  },
+  "type": "module",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "lint:oversight": "oversight storybook-static/manifests/components.json"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "10.5.10",
+    "@storybook/addon-mcp": "0.7.0",
+    "@storybook/react-vite": "10.5.10",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "oversight-lint": "0.7.0",
+    "storybook": "10.5.10",
+    "storybook-addon-oversight": "0.7.0",
+    "typescript": "5.9.3",
+    "vite": "7.1.9"
+  },
+  "dependencies": {
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  }
+}
