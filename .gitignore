@@ -1,3 +1,5 @@
 node_modules
 storybook-static
+storybook-static-main
+storybook-static-findings
 *.log
