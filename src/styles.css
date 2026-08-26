@@ -1,8 +1,127 @@
 :root {
+  --tone-neutral: #64748b;
+  --tone-accent: #4f46e5;
+  --tone-success: #059669;
+  --tone-danger: #dc2626;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --text-muted: #64748b;
+
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  color: #1a1a1a;
+  color: var(--text);
 }
 
 * {
   box-sizing: border-box;
+}
+
+/* Pill */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid currentColor;
+  font-weight: 600;
+  line-height: 1;
+}
+.pill--md {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8125rem;
+}
+.pill--sm {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.6875rem;
+}
+
+/* Media surfaces */
+.media {
+  display: flex;
+  gap: 0.875rem;
+  align-items: center;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-left-width: 4px;
+  text-align: left;
+  width: 100%;
+  font: inherit;
+  color: inherit;
+}
+.media--card {
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  max-width: 20rem;
+}
+.media--row {
+  flex-direction: row;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  max-width: 28rem;
+}
+.media__title {
+  font-weight: 700;
+}
+.media__subtitle {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+.media__meta {
+  margin-left: auto;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+.media--card .media__meta {
+  margin-left: 0;
+}
+
+/* Form controls */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 14rem;
+}
+.field__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.field__control {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.65rem;
+  font: inherit;
+  color: inherit;
+  background: var(--surface);
+}
+.stepper {
+  display: flex;
+  align-items: stretch;
+  gap: 0.25rem;
+}
+.stepper__button {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  font: inherit;
+  color: inherit;
+  width: 2.25rem;
+  cursor: pointer;
+}
+.stepper__value {
+  flex: 1;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-variant-numeric: tabular-nums;
+}
+.stepper__button:disabled {
+  color: var(--text-muted);
+  opacity: 0.4;
+  cursor: not-allowed;
 }
