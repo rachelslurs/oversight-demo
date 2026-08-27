@@ -24,6 +24,9 @@ export type MediaRowProps = {
 /**
  * A horizontal surface that lays one subject's title, detail, and metadata on a
  * single line. Use it in dense lists, where many items share a narrow column.
+ *
+ * Superseded by [Media Card](?path=/docs/surfaces-media-card--docs), which gives
+ * the same content its own column.
  */
 export function MediaRow({ title, subtitle, items, tone = "neutral", onSelect }: MediaRowProps) {
   const content = (
