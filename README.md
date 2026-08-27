@@ -6,8 +6,7 @@ The components in this repo are deliberately broken on the `findings` branch, an
 
 ```
 npm install
-npm run build-storybook
-npx oversight storybook-static/manifests/components.json
+npm run lint:docs
 ```
 
-`npm run lint:docs` is the demo shortcut. It reads a manifest pre-built into a branch-specific directory that is gitignored, so in a fresh clone it fails until you run the build above.
+`lint:docs` builds the Storybook the manifest comes from, then lints it. To lint a build you already have without rebuilding it, run `npx oversight`.

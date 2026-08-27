@@ -13,7 +13,7 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "lint:docs": "oversight storybook-static-main/manifests/components.json"
+    "lint:docs": "storybook build --loglevel error && oversight"
   },
   "devDependencies": {
     "@storybook/addon-docs": "10.5.10",
