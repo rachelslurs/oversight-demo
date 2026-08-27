@@ -1,10 +1,6 @@
 import { useState } from "react";
 
 export type StepInputProps = {
-  /**
-   * Accessible name for the control. Required: the two buttons and the readout
-   * are separate elements, so there is nothing for a bare label to attach to.
-   */
   label: string;
   /** Starting value. Leave unset to begin at the lower bound. */
   value?: number;
