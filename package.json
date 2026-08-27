@@ -21,7 +21,7 @@
     "@storybook/react-vite": "10.5.10",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
-    "oversight-lint": "0.7.0",
+    "oversight-lint": "0.7.1",
     "storybook": "10.5.10",
     "storybook-addon-oversight": "0.7.0",
     "typescript": "5.9.3",
