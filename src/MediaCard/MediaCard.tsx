@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import type { Tone } from "../types";
 
 const TONE: Record<Tone, string> = {
@@ -38,7 +38,7 @@ export function MediaCard({ title, subtitle, items, tone = "neutral", onSelect }
       )}
     </>
   );
-  const style = { borderLeftColor: TONE[tone] };
+  const style = { "--media-accent": TONE[tone] } as CSSProperties;
   return onSelect ? (
     <button type="button" className="media media--card" style={style} onClick={onSelect}>
       {content}
