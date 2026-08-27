@@ -1,0 +1,20 @@
+name: Docs coverage
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  oversight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # Needs @storybook/addon-mcp; writes storybook-static/manifests/components.json.
+      - run: npm run build-storybook
+      - uses: rachelslurs/oversight-lint-action@v1
