@@ -8,15 +8,10 @@ const TYPE = {
 } as const;
 
 export type TextFieldProps = {
-  /** Visible label above the field. Omit it and pass an `aria-label` instead. */
   label?: ReactNode;
-  /** Current text. Leave unset to let the field manage its own. */
   value?: string;
-  /** Fires with the full text after each edit. */
   onChange?: (value: string) => void;
-  /** Hint shown inside the field while it is empty. */
   placeholder?: string;
-  /** Which keyboard and validation the browser applies. Defaults to `text`. */
   type?: keyof typeof TYPE;
 };
 
