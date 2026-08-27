@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { MediaCard } from "./MediaCard";
+import { MediaTile } from "./MediaTile";
 
 const meta = {
-  title: "Surfaces/Media Card",
-  component: MediaCard,
-} satisfies Meta<typeof MediaCard>;
+  title: "Surfaces/Media Tile",
+  component: MediaTile,
+} satisfies Meta<typeof MediaTile>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

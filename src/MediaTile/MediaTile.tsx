@@ -8,7 +8,7 @@ const TONE: Record<Tone, string> = {
   danger: "var(--tone-danger)",
 };
 
-export type MediaCardProps = {
+export type MediaTileProps = {
   /** Primary label, rendered bold at the top of the card. */
   title: ReactNode;
   /** Secondary line beneath the title, for supporting detail. */
@@ -26,7 +26,7 @@ export type MediaCardProps = {
  * a self-contained block. Use it in grids and galleries, where each item gets
  * its own column of space.
  */
-export function MediaCard({ title, subtitle, items, tone = "neutral", onSelect }: MediaCardProps) {
+export function MediaTile({ title, subtitle, items, tone = "neutral", onSelect }: MediaTileProps) {
   const content = (
     <>
       <span className="media__title">{title}</span>
